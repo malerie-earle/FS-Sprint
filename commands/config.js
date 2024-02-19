@@ -15,25 +15,16 @@ app config --help        displays the usage.txt file
  *************************/
 
 const fs = require("fs");
-
 const myArgs = process.argv.slice(2);
-
 const { configjson } = require('./templates.js');
 
-function displayConfig() { // display the configuration file in the console, use command line argument --show
+
+// display the configuration file in the console, use command line argument --show
+function displayConfig() { 
     if(DEBUG) console.log('config.displayConfig()');
     fs.readFile(__dirname + "/json/config.json", (error, data) => {
         if(error) throw error;   
         console.log(JSON.parse(data));
-    });
-}
-
-function resetConfig() { // reset the configuration file to its original state, use command line argument --reset
-    if(DEBUG) console.log('config.resetConfig()');
-    let configdata = JSON.stringify(configjson, null, 2);
-    fs.writeFile(__dirname + '/json/config.json', configdata, (error) => {
-        if(error) throw error;   
-        if(DEBUG) console.log('Config file reset to original state');
     });
 }
 
@@ -67,8 +58,18 @@ function setConfig() { // set a configuration setting, use command line argument
 }
 
 
+// reset the configuration file to its original state, use command line argument --reset
+function resetConfig() { 
+    if(DEBUG) console.log('config.resetConfig()');
+    let configdata = JSON.stringify(configjson, null, 2);
+    fs.writeFile(__dirname + '/json/config.json', configdata, (error) => {
+        if(error) throw error;   
+        if(DEBUG) console.log('Config file reset to original state');
+    });
+}
 
-function configApp() { // configure the app, use command line argument --config
+// configure the app, use command line argument --config
+function configApp() { 
   if(DEBUG) console.log('configApp()');
 
   switch (myArgs[1]) {
@@ -98,6 +99,7 @@ function configApp() { // configure the app, use command line argument --config
   }
 }
 
+// do we need to export all of these functions? or just the configApp() function?
 module.exports = {
-  configApp,
+  configApp
 }
