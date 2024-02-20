@@ -1,18 +1,28 @@
 {
   "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
     "crc": "^4.3.2",
     "date-fns": "^3.3.1",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
-    "uuid": "^9.0.1"
+    "express-openid-connect": "^2.17.1",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "yarg": "^1.0.8",
+    "yargs": "^17.7.2"
   },
-  "name": "s3-midtermsprint-fs",
+  "name": "fs-sprint",
   "description": "",
   "version": "1.0.0",
-  "main": "app.js",
-  "devDependencies": {},
+  "main": "bin/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "hello": "./bin/app.js"
+  }
 }

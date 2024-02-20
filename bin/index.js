@@ -1,5 +1,5 @@
 /*************************
- * File Name: app.js
+ * File Name: index.js
  * Purpose: The main entry point for the application
  
  * Commands:
@@ -13,43 +13,62 @@ app  --help         displays the usage.txt file
  * Authors: Malerie Earle, Kateryna Danevych, Janeil Carroll
  
  *************************/
-global.DEBUG = true;
+global.DEBUG = false;
 
+// import the fs module
 const fs = require("fs");
 
-const { initializeApp } = require('./init.js'); // import the init.js module and initialize the app
+// import the logEvents.js module and create a logger
+const { logger } = require('./logEvents.js');
 
-const { configApp } = require('./config.js'); // import the config.js module and configure the app
+// import the myEmitter and logger from the logEvents.js module
+const { myEmitter, logger } = require('./logEvents.js');
 
-const myArgs = process.argv.slice(2); // get the command line arguments
+// import the config.js module and configure the app
+const { configApp } = require('./config.js'); 
 
+// get the command line arguments
+const myArgs = process.argv.slice(2); 
+myEmitter.emit('event', 'app', 'INFO', 'The app has started.');
+if(myArgs.length >= 1) {
+    myEmitter.emit('event', 'app', 'INFO', `The app.args: ${myArgs}`);
+}
 
-if(DEBUG) if(myArgs.length >= 1) console.log('the app.args: ', myArgs);
-
+// switch statement to handle the command line arguments
 switch (myArgs[0]) {
-
+// initialize app
   case 'init':
-  case 'i':
-      if(DEBUG) console.log(myArgs[0], ' - initialize the app.');
-      initializeApp();
-      break;
+  case 'i': // should we use i as it can also mean install
+    myEmitter.emit(myArgs[0], ' - initialize the app.');
+    initializeApp();
+    logger.info(`Command '${myArgs[0]}' received - initializing the app.`);
+    break;
 
+// display the configuration file
   case 'config':
   case 'c':
-      if(DEBUG) console.log(myArgs[0], ' - display the configuration file');
-      configApp(); 
+    myEmitter.emit(myArgs[0], ' - display the configuration file');
+    configApp(); 
+    logger.info(`Command '${myArgs[0]}' received - displaying the configuration file.`);
       break;
+
 
   case 'token':
   case 't':
-      if(DEBUG) console.log(myArgs[0], ' - generate a user token');
+    myEmitter.emit(myArgs[0], ' - generate a user token');
+    // generateToken();
+    logger.info(`Command '${myArgs[0]}' received - generating a user token.`);
       break;  
 
+// display the usage.txt file when help is requested
   case '--help':
   case '--h':
   default:
       fs.readFile(__dirname + "/usage.txt", (error, data) => {
-          if(error) throw error;
-          console.log(data.toString());
+        if (error) {
+            logger.error(`An error occurred: ${error}`);
+        } else {
+            logger.info(data.toString());
+        }
       });
 }
