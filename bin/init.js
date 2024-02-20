@@ -17,10 +17,10 @@ app init --help     displays the usage.txt file
 const fs = require("fs");
 const path = require('path');
 const fsPromises = require('fs').promises;
-const {folders, configjson, tokenjson} = require('./templates.js');
+const {folders, configjson, tokenjson} = require('../commands/templates.js');
 
-
-function createFolders() {  // app init --mk           create all the application folders   
+// app init --mk create all the application folders   
+function createFolders() {  
 
 
     if(DEBUG) console.log('init.createFolders()');
