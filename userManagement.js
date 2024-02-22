@@ -31,7 +31,6 @@ function addUserRecord(username, email, phone) {
     });
 }
 
-// Function to update an existing user record
 function updateUserRecords(username, email, phone) {
     // Read existing user data from JSON file
     fs.readFile('user.json', 'utf8', (err, data) => {
@@ -50,7 +49,7 @@ function updateUserRecords(username, email, phone) {
                 if (email) userToUpdate.email = email;
                 if (phone) userToUpdate.phone = phone;
 
-                // Write updated user data back to JSON file 
+                // Write updated user data back to JSON file with indentation
                 fs.writeFile('user.json', JSON.stringify(users, null, 2), (err) => {
                     if (err) {
                         console.error('Error writing user data:', err);
@@ -67,7 +66,6 @@ function updateUserRecords(username, email, phone) {
     });
 }
 
-// Function to add new attribute to user.json
 function addNewUserAttribute(attributeName, attributeValue) {
     fs.readFile('user.json', 'utf8', (err, data) => {
         if (err) {
@@ -94,7 +92,6 @@ function addNewUserAttribute(attributeName, attributeValue) {
     });
 }
 
-// Function to add new attribute to config.json
 function addNewConfigAttribute(attributeName, attributeValue) {
     fs.readFile('config.json', 'utf8', (err, data) => {
         if (err) {
@@ -119,4 +116,41 @@ function addNewConfigAttribute(attributeName, attributeValue) {
     });
 }
 
+// Function to search for a user record by username, email, or phone number
+function searchUserRecord(query) {
+    fs.readFile('user.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading user data:', err);
+            return;
+        }
+        try {
+            let users = JSON.parse(data);
+            // Filter user records based on the query
+            let foundUsers = users.filter(user => {
+                return (
+                    user.username.toLowerCase() === query.toLowerCase() ||
+                    user.email.toLowerCase() === query.toLowerCase() ||
+                    user.phone === query
+                );
+            });
+            if (foundUsers.length > 0) {
+                console.log('Found user(s):');
+                foundUsers.forEach(user => {
+                    console.log(user);
+                });
+            } else {
+                console.log('No user found with the given query.');
+            }
+        } catch (error) {
+            console.error('Error parsing user data:', error);
+        }
+    });
+}
 
+module.exports = {
+    addUserRecord,
+    updateUserRecords,
+    addNewUserAttribute,
+    addNewConfigAttribute,
+    searchUserRecord
+};

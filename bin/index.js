@@ -38,7 +38,7 @@ if(myArgs.length >= 1) {
 switch (myArgs[0]) {
 // initialize app
   case 'init':
-  case 'i': // should we use i as it can also mean install
+  case 'i': // should we use i as it can also mean install (maybe s for start? -janeil)
     myEmitter.emit(myArgs[0], ' - initialize the app.');
     initializeApp();
     logger.info(`Command '${myArgs[0]}' received - initializing the app.`);
