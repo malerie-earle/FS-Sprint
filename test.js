@@ -1,3 +1,9 @@
+// Import fs module
+const fs = require('fs');
+
+// Import user management functions
+const { addUserRecord, updateUserRecords} = require('./userManagement');
+
 // Test adding a new user record
 addUserRecord('janeil_carroll', 'janeilchantelle@gmail.com', '709-219-2491');
 
