@@ -7,17 +7,6 @@ const { myEmitter, logger } = require('./logEvents.js');
 // Home page route
 function indexPage(path, response) {
   myEmitter.emit('route', path);
-  
-  // Read index.html file
-  fs.readFile(path, (error, content) => {
-    if(error) {
-      response.writeHead(500, { 'Content-Type': 'text/plain' });
-      response.end('500 Internal Server Error');
-    } else {
-      renderHomePageWithWeather(path, response);
-      logger.info(`File was successfully read: ${path}`);
-    }
-  });
 }
 
 // About page route
