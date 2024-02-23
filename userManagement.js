@@ -17,7 +17,7 @@ function addUserRecord(username, email, phone) {
             // Add new user record
             users.push({ username, email, phone });
 
-            // Write updated user data back to JSON file with indentation
+            // Write updated user data back to JSON file
             fs.writeFile('user.json', JSON.stringify(users, null, 2), (err) => {
                 if (err) {
                     console.error('Error writing user data:', err);
@@ -49,7 +49,7 @@ function updateUserRecords(username, email, phone) {
                 if (email) userToUpdate.email = email;
                 if (phone) userToUpdate.phone = phone;
 
-                // Write updated user data back to JSON file with indentation
+                // Write updated user data back to JSON file
                 fs.writeFile('user.json', JSON.stringify(users, null, 2), (err) => {
                     if (err) {
                         console.error('Error writing user data:', err);
@@ -102,7 +102,7 @@ function addNewConfigAttribute(attributeName, attributeValue) {
             let configData = JSON.parse(data);
             // Add new attribute to config object
             configData[attributeName] = attributeValue;
-            // Write updated config data back to JSON file with indentation
+            // Write updated config data back to JSON file
             fs.writeFile('config.json', JSON.stringify(configData, null, 2), (err) => {
                 if (err) {
                     console.error('Error writing config data:', err);
