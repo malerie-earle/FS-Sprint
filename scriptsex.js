@@ -1,27 +1,25 @@
-// Cart Functionality
+js/script.js
 const btnCart=document.querySelector('#cart-icon');
 const cart=document.querySelector('.cart');
 const btnClose=document.querySelector('#cart-close');
 
-// Open Cart
 btnCart.addEventListener('click',()=>{
   cart.classList.add('cart-active');
 });
 
-// Close Cart
 btnClose.addEventListener('click',()=>{
   cart.classList.remove('cart-active');
 });
 
-// Load Products
-document.addEventListener('DOMContentLoaded',loadProducts);
+document.addEventListener('DOMContentLoaded',loadFood);
 
-function loadProducts(){
+function loadFood(){
   loadContent();
+
 }
 
 function loadContent(){
-  //Remove Product Items From Cart
+  //Remove Food Items  From Cart
   let btnRemove=document.querySelectorAll('.cart-remove');
   btnRemove.forEach((btn)=>{
     btn.addEventListener('click',removeItem);
@@ -34,12 +32,15 @@ function loadContent(){
   });
 
   //Product Cart
+  
   let cartBtns=document.querySelectorAll('.add-cart');
   cartBtns.forEach((btn)=>{
     btn.addEventListener('click',addCart);
   });
+
   updateTotal();
 }
+
 
 //Remove Item
 function removeItem(){
@@ -90,6 +91,7 @@ loadContent();
 
 
 function createCartProduct(title,price,imgSrc){
+
   return `
   <div class="cart-box">
   <img src="${imgSrc}" class="cart-img">
@@ -126,6 +128,7 @@ function updateTotal()
 
 
   // Add Product Count in Cart Icon
+
   const cartCount=document.querySelector('.cart-count');
   let count=itemList.length;
   cartCount.innerHTML=count;
@@ -135,4 +138,6 @@ function updateTotal()
   }else{
     cartCount.style.display='block';
   }
+
+
 }
