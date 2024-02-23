@@ -1,6 +1,8 @@
 /*************************
  * File Name: index.js
+ * 
  * Purpose: The main entry point for the application
+ * 
  * Commands:
 app  --init         initializes the app
 app  --config       displays the configuration file
@@ -9,6 +11,7 @@ app  --help         displays the usage.txt file
 app  --addUser      add a new user record
 app  --updateUser   update an existing user record
 app  --searchUser   search for a user record
+
  * Created Date: 18 Feb 2024
  * Authors: Malerie Earle, Kateryna Danevych, Janeil Carroll
  *************************/
