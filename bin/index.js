@@ -4,18 +4,26 @@
  * Purpose: The main entry point for the application
  * 
  * Commands:
-app  --init         initializes the app
-app  --config       displays the configuration file
-app  --token        generates a user token
-app  --help         displays the usage.txt file
-app  --addUser      add a new user record
-app  --updateUser   update an existing user record
-app  --searchUser   search for a user record
-
+ * 
+ * app init                                initialize the application.
+ * app config                              create or change the app configuration.
+ * app config --show                       show the contents of the config file
+ * app config --reset                      reset back to default the config file
+ * app config --set                        set a specific config setting.
+ * app token --help                        displays help for the token command.
+ * app token --count                       displays a count of the tokens created.
+ * app token --new <username>              generates a token for a given username.
+ *                                         saves tokens to the json file.
+ * app token --upd p <username> <phone>    updates the json entry with a new phone number.
+ * app token -- upd e <username> <email>   updates the json entry with a new email.
+ * app token --search u <username>         fetches a token for a given username.
+ * app token --search e <email>            fetches a token for a given email.
+ * app token --search p <phone>            fetches a token for a given phone number.
+ * 
  * Created Date: 18 Feb 2024
  * Authors: Malerie Earle, Kateryna Danevych, Janeil Carroll
  *************************/
-
+ 
 // Import fs module
 const fs = require("fs");
 
@@ -52,9 +60,27 @@ switch (myArgs[0]) {
     // Display the configuration file
     case 'config':
     case 'c':
-        myEmitter.emit(myArgs[0], ' - display the configuration file');
-        configApp(); 
-        logger.info(`Command '${myArgs[0]}' received - displaying the configuration file.`);
+        switch (myArgs[1]) {
+            case '--show':
+                myEmitter.emit(myArgs[1], ' - show the contents of the config file');
+                // Call function to show the contents of the config file
+                logger.info(`Command '${myArgs[1]}' received - showing the contents of the config file.`);
+                break;
+            case '--reset':
+                myEmitter.emit(myArgs[1], ' - reset back to default the config file');
+                // Call function to reset the config file
+                logger.info(`Command '${myArgs[1]}' received - resetting back to default the config file.`);
+                break;
+            case '--set':
+                myEmitter.emit(myArgs[1], ' - set a specific config setting');
+                // Call function to set a specific config setting
+                logger.info(`Command '${myArgs[1]}' received - setting a specific config setting.`);
+                break;
+            default:
+                myEmitter.emit(myArgs[0], ' - display the configuration file');
+                configApp(); 
+                logger.info(`Command '${myArgs[0]}' received - displaying the configuration file.`);
+        }
         break;
 
     // Generate a user token
