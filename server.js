@@ -18,7 +18,7 @@ app.get("/", (request, response) => {
 app.get("/pages/index", (request, response) => {
   myEmitter.emit('route', request.url);
   response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
-  logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+  logger.log(clc.magenta ({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` }));
 });
 
 app.get("/pages/about", (request, response) => {
