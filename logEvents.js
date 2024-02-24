@@ -2,8 +2,9 @@
 const winston = require('winston');
 require('winston-daily-rotate-file');
 const fs = require('fs');
-const { combine, timestamp, json, errors } = winston.format;
+const { combine, timestamp, printf, errors } = winston.format;
 const path = require('path');
+const color = require('colors');
 
 // Import the EventEmitter class
 const EventEmitter = require('events');
@@ -38,12 +39,39 @@ const errorFileRotateTransport = new winston.transports.DailyRotateFile({
   maxFiles: '30d'
 });
 
-// Create a logger
+// Create a logger with custom format including colorization
 const logger = winston.createLogger({
-  level: 'info',
+  levels: {
+    error: 0,
+    warn: 1,
+    info: 2,
+    http: 3,
+    debug: 4,
+  },
   format: combine(
     timestamp({ format: 'YYYY-MM-DD hh:mm:ss.SSS A' }),
-    json(),
+    printf(info => {
+      let colorizedMessage = info.message;
+      switch (info.level) {
+        case 'info':
+          colorizedMessage = color.green(info.message);
+          break;
+        case 'warn':
+          colorizedMessage = color.magenta(info.message);
+          break;
+        case 'error':
+          colorizedMessage = color.red(info.message);
+          break;
+        case 'http':
+          colorizedMessage = color.rainbow(info.message);
+          break;
+        case 'debug':
+          colorizedMessage = color.blue(info.message);
+          break;
+      }
+      // Add background color to the entire message
+      return color.bgBlack(`${info.timestamp} ${info.level}: ${colorizedMessage}`);
+    }),
     errors({ stack: true })
   ),
   defaultMeta: { service: 'admin-service' },
@@ -51,11 +79,7 @@ const logger = winston.createLogger({
     fileRotateTransport,
     errorFileRotateTransport,
     new winston.transports.Console({
-      format: combine(
-        winston.format.colorize(),
-        winston.format.simple()
-      ),
-      level: 'info'
+      level: 'debug'
     })
   ],
   exitOnError: false,
@@ -64,46 +88,38 @@ const logger = winston.createLogger({
 });
 
 process.on('uncaughtException', (error) => {
-  logger.error({ message: `Uncaught Exception: ${error.message}` });
+  logger.error(`Uncaught Exception: ${error.message}`);
   process.exit(1);
 });
 
 // Fired when a log file is created
 fileRotateTransport.on('new', (filename) => {
-  logger.log({
-    level: 'info',
-    message: `A new log file was created: ${filename}`
-  });
+  logger.info(`A new log file was created: ${filename}`);
 });
 
 // Fired when a log file is rotated
 fileRotateTransport.on('rotate', (oldFilename, newFilename) => {
-  logger.log({
-    level: 'info',
-    message: `A log file was rotated. Old filename: ${oldFilename}. New filename: ${newFilename}`
-  });
+  logger.info(`A log file was rotated. Old filename: ${oldFilename}. New filename: ${newFilename}`);
 });
 
 // Fired when a log file is deleted
 fileRotateTransport.on('logRemoved', (removedFilename) => {
   const newFilename = removedFilename.replace(logsDir, path.join(logsDir, getCurrentDate()));
-  logger.log({
-    level: 'info',
-    message: `A log file was removed: ${newFilename}`
-  });
+  logger.info(`A log file was removed: ${newFilename}`);
 });
 
 // Listen for 'event' events
 myEmitter.on('event', (url, level, message) => {
-  logger.log({
-    level: level,
-    message: `Event occurred: ${message}. URL: ${url}`
-  });
+  logger[level](`Event occurred: ${message}. URL: ${url}`);
 });
 
-logger.exitOnError = false;
+// Usage:
+logger.info('This is an information message.');
+logger.warn('This is a warning message.');
+logger.error('This is an error message.');
+logger.http('This is an HTTP message.');
+logger.debug('This is a debug message.');
 
-// Export logger and event emitter
 module.exports = {
   logger,
   myEmitter

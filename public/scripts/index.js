@@ -122,7 +122,7 @@ function updateTotal()
 
   });
 
-  totalValue.innerHTML='Rs.'+total;
+  totalValue.innerHTML='$'+total;
 
 
   // Add Product Count in Cart Icon
