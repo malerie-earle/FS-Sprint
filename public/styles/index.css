@@ -353,3 +353,21 @@ transform: scale(1.5);
   cursor: pointer;
   border: none;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #57ff5db1;
+  margin: 20px;
+  background-color: #039F4C;
+  background: hsla(0, 0%, 12%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  color: white;
+}

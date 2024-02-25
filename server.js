@@ -1,34 +1,15 @@
 const express = require("express");
 const path = require('path');
-const { myEmitter, logger } = require('../logEvents');
-
-// Importing functions from separate DAL files
-const { getCustomers } = require('./DAL/customer.dal');
-const { getVendors } = require('./DAL/vendor.dal');
-const { getProducts } = require('./DAL/product.dal');
+const { myEmitter, logger } = require('./logEvents');
+const { router } = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.set('view engine', 'ejs');
-
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", (request, response) => {
-  response.redirect("/pages/index");
-});
-
-app.get("/pages/index", (request, response) => {
-  myEmitter.emit('route', request.url);
-  response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
-  logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
-});
-
-app.get("/pages/about", (request, response) => {
-  myEmitter.emit('route', request.url);
-  response.send("the /about route.");
-  logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
-});
+app.use('/', router);
 
 // Route handler for fetching customers
 app.get("/customers", async (request, response) => {
