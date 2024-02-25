@@ -24,7 +24,7 @@
  * Authors: Malerie Earle, Kateryna Danevych, Janeil Carroll
  *************************/
  
-// Import fs module
+// Import fs module 
 const fs = require("fs");
 
 // Import user management functions from userManagement.js

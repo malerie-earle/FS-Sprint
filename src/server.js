@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require('path');
-const { myEmitter, logger } = require('./logEvents');
+const { myEmitter, logger } = require('../logEvents');
+const { getCustomers, getVendors, getProducts } = require('./DAL');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
@@ -10,7 +11,7 @@ app.set('view engine', 'ejs');
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define your route handlers
+// Define your existing route handlers
 app.get("/", (request, response) => {
   response.redirect("/pages/index");
 });
@@ -25,6 +26,39 @@ app.get("/pages/about", (request, response) => {
   myEmitter.emit('route', request.url);
   response.send("the /about route.");
   logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
+// New route handler for fetching customers
+app.get("/customers", async (request, response) => {
+  try {
+    const customers = await getCustomers();
+    response.json(customers);
+  } catch (error) {
+    logger.error({ level: 'error', message: `Error fetching customers: ${error.message}` });
+    response.status(500).send("Internal Server Error");
+  }
+});
+
+// New route handler for fetching vendors
+app.get("/vendors", async (request, response) => {
+  try {
+    const vendors = await getVendors();
+    response.json(vendors);
+  } catch (error) {
+    logger.error({ level: 'error', message: `Error fetching vendors: ${error.message}` });
+    response.status(500).send("Internal Server Error");
+  }
+});
+
+// New route handler for fetching products
+app.get("/products", async (request, response) => {
+  try {
+    const products = await getProducts();
+    response.json(products);
+  } catch (error) {
+    logger.error({ level: 'error', message: `Error fetching products: ${error.message}` });
+    response.status(500).send("Internal Server Error");
+  }
 });
 
 // Handle 404 errors
