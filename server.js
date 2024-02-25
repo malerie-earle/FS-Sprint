@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require('path');
-const { myEmitter, logger } = require('../logEvents');
+const { myEmitter, logger } = require('./logEvents');
+const { router } = require('./routes');
 
 // Importing functions from separate DAL files
 const { getCustomers } = require('./DAL/customer.dal');
@@ -29,6 +30,8 @@ app.get("/pages/about", (request, response) => {
   response.send("the /about route.");
   logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
 });
+
+app.use('/', router);
 
 // Route handler for fetching customers
 app.get("/customers", async (request, response) => {
