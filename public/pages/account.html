@@ -76,14 +76,9 @@
 
     <div class = "navBox" id = "navBox4">
       <div class = "box">
+        <div class="cart-count">0</div>
         <img src = "/images/trolley-cart.png" alt = "Cart" class = "icon" id = "cart-icon"/>
     </div></div>
-
-    <!-- <div class = "box">
-      <div class="cart-count">0</div>
-      <button class = "cart" id = "cart-icon">
-      <img src = "/images/trolley-cart.png" alt = "Cart" class = "icon" id = "cartIcon"/>
-      </button></div></div> -->
 
     <div class="cart">
       <div class="cart-title">Cart Items</div>
@@ -92,7 +87,7 @@
 
     <div class="total">
       <div class="total-title">Total</div>
-      <div class="total-price">Rs.0</div>
+      <div class="total-price">$</div>
     </div>
 
     <button class="btn-buy">
@@ -100,7 +95,7 @@
       Place Order</button>
 
     <button class = "close" id = "cart-close">
-      <img src = "/images/empty-cart.png" alt = "Close Cart" class = "icons" id = "closeIcon" />
+      X
     </button>
     </div>
 
@@ -124,11 +119,111 @@
 </header>
   <div class="home">
 
-
-
 </div>
+  <!-- {isCartVisible && (
+    <div className="shoppingCartDropdown">
+      <h2>Shopping Cart</h2>
+      <div className="cartItems">
+        <ShoppingCart />
+      </div>
+    </div>
+  )}
   
-<!-- <footer>
+
+{showAddedToCartAlert && (
+  <div className="addedToCartAlert">
+    Added to cart!
+  </div>
+)}
+
+<div className="categories">
+  <div className="category"> 
+    {categories.map((category, index) => (
+      <p key={index}>
+        <button
+          key={index}
+          className={selectedCategory && selectedCategory.includes(category) ? "categoryBar categoryBarSelect" : "categoryBar"}
+          onClick={() => handleCategoryToggle(category)}
+        >
+          {category}
+        </button>
+      </p>
+    ))}
+
+    <button
+      className="showAllBtn"
+      onClick={() => {
+        handleCategoryToggle(null);
+        setDisplayedProducts(shuffledProducts);
+      }}
+    >
+      Show All
+    </button>
+
+    <h2 className="sortBy">Sort By: </h2>
+    <button className="sortBtn" onClick={sortProducts}>
+      {sortButtonText}
+    </button>
+  </div>
+</div>
+
+<div className="productList">
+  <div className="listedProduct">
+    {displayedProducts.map((product) => (
+      <div className="item" key={product.id}>
+        <div className="productTitle">
+          <h3 className="h3Title">{product.title}</h3>
+        </div>
+
+        <div className="productImage">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="image"
+            onClick={() => handleProductClick(product)}
+          />
+        </div>
+
+        <p className="productPrice">${product.price}</p>
+        <div className="productDetails">
+          <div className="productActions">
+            <label>
+              Qty:
+              <input
+                className="qtyInput"
+                type="number"
+                min="1"
+                value={quantities[product.id] || 1}
+                onChange={(e) => handleQuantityChange(product, parseInt(e.target.value, 10))}
+              />
+            </label>
+            <div className="addCartBtn">
+              <button
+                className="addCartBtn"
+                onClick={() => handleAddToCart(product)}
+              >
+                <img
+                  src={addCartIcon}
+                  alt="Add to Cart"
+                  className="icon"
+                  id="addCartIcon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+{selectedProduct && (
+  <ProductDetailsModal
+    product={selectedProduct}
+    onClose={handleCloseModal}
+  />
+)}
+<footer>
   <ScrollToTop smooth className = "scrollTop" />
   <p>
   © Copyright Python Pink - 2023
@@ -150,7 +245,7 @@
 <h3 className = "collaborators">Justin Whelan</h3></a><br />
 </div>
   
-</footer>  -->
-<script src="/scripts/index.js"></script>
+</footer> -->
+<script src="/scripts/scripts.js"></script>
 </body>
 </html>
