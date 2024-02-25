@@ -1,17 +1,19 @@
 const express = require("express");
 const path = require('path');
 const { myEmitter, logger } = require('../logEvents');
-const { getCustomers, getVendors, getProducts } = require('./DAL');
+
+// Importing functions from separate DAL files
+const { getCustomers } = require('./DAL/customer.dal');
+const { getVendors } = require('./DAL/vendor.dal');
+const { getProducts } = require('./DAL/product.dal');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.set('view engine', 'ejs');
 
-// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define your existing route handlers
 app.get("/", (request, response) => {
   response.redirect("/pages/index");
 });
@@ -28,7 +30,7 @@ app.get("/pages/about", (request, response) => {
   logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
 });
 
-// New route handler for fetching customers
+// Route handler for fetching customers
 app.get("/customers", async (request, response) => {
   try {
     const customers = await getCustomers();
@@ -39,7 +41,7 @@ app.get("/customers", async (request, response) => {
   }
 });
 
-// New route handler for fetching vendors
+// Route handler for fetching vendors
 app.get("/vendors", async (request, response) => {
   try {
     const vendors = await getVendors();
@@ -50,7 +52,7 @@ app.get("/vendors", async (request, response) => {
   }
 });
 
-// New route handler for fetching products
+// Route handler for fetching products
 app.get("/products", async (request, response) => {
   try {
     const products = await getProducts();
@@ -61,14 +63,12 @@ app.get("/products", async (request, response) => {
   }
 });
 
-// Handle 404 errors
 app.use((request, response) => {
   const errorMessage = '404 - route not found.';
   logger.error({ level: 'error', message: errorMessage });
   response.status(404).send(errorMessage);
 });
 
-// Start the server
 const server = app.listen(PORT, () => {
   logger.info({ level: 'info', message: `Server is listening on port ${PORT}` });
 });
