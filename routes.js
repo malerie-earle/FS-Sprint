@@ -1,37 +1,51 @@
 // Imports
 const fs = require('fs');
-const request = require('request'); // Include request module for API request
+const express = require('express');
+const path = require('path');
 const { myEmitter, logger } = require('./logEvents.js');
 
+const router = express.Router();
 
-// Home page route
-function indexPage(path, response) {
-  myEmitter.emit('route', path);
-}
+router.get('/', (request, response) => {
+  response.redirect("/pages/index");
+});
 
-// About page route
-function aboutPage(path, response) {
-  myEmitter.emit('route', path);
-  fetchFile(path, response)
-}
+router.get('/pages/index', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
 
-// Contact page route
-function contactPage(path, response) {
-  myEmitter.emit('route', path);
-  fetchFile(path, response)
-}
+router.get('/pages/about', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'about.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
 
-// Products page route
-function productsPage(path, response) {
-  myEmitter.emit('route', path);
-  fetchFile(path, response)
-}
+router.get('/pages/contact', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'contact.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
 
-// Subscribe page route
-function subscribePage(path, response) {
-  myEmitter.emit('route', path);
-  fetchFile(path, response)
-}
+router.get('/pages/account', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'account.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
+router.get('/pages/users', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'users.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
+router.get('/pages/checkout', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'checkout.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
 
 // Create a new folder
 function createFolder(request, response) {
@@ -63,10 +77,6 @@ function fetchFile(fileName, response) {
 }
 
 module.exports = {
-  aboutPage,
-  contactPage,
-  productsPage,
-  subscribePage,
-  indexPage,
+  router,
   createFolder
-}
+  }

@@ -13,3 +13,63 @@
 [40m2024-02-24 07:44:24.126 PM error: [31mThis is an error message.[39m[49m
 [40m2024-02-24 07:44:24.129 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
 [40m2024-02-24 07:44:24.129 PM error: [31mPort 8081 is already in use.[39m[49m
+[40m2024-02-24 08:17:54.093 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-24 08:17:54.095 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-24 08:17:54.095 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-24 08:17:54.098 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
+[40m2024-02-24 08:17:54.099 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-24 08:18:59.898 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-24 08:18:59.899 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-24 08:18:59.900 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-24 08:18:59.902 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
+[40m2024-02-24 08:18:59.903 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-24 08:23:22.788 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-24 08:23:22.790 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-24 08:23:22.790 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-24 08:23:22.794 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
+[40m2024-02-24 08:23:22.795 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-24 08:23:25.393 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-24 08:23:25.542 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-24 08:43:10.718 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-24 08:48:00.826 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-24 08:48:02.874 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-24 08:51:16.914 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-24 08:51:17.834 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-24 09:08:55.690 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-24 09:30:00.793 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-24 09:30:00.795 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-24 09:30:00.795 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-24 09:30:00.799 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
+[40m2024-02-24 09:30:00.799 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-24 09:30:07.010 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-24 09:31:40.023 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-24 09:31:40.024 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-24 09:31:40.024 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-24 09:31:40.027 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
+[40m2024-02-24 09:31:40.028 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-24 09:31:48.168 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-24 09:31:50.932 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:32:55.154 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:32:56.559 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:36:13.568 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:36:14.537 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:36:39.005 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-24 09:36:39.007 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-24 09:36:39.007 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-24 09:36:39.010 PM info: [32mA new log file was created: logs/2024-02-24/combined-2024-02-24.log[39m[49m
+[40m2024-02-24 09:36:39.012 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-24 09:36:41.970 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:36:48.869 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-24 09:36:49.190 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-24 09:36:51.473 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:38:00.838 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:41:35.943 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:41:50.999 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:41:51.049 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-24 09:44:21.929 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:45:13.094 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:47:43.125 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:47:51.801 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:48:05.185 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:48:26.679 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-24 09:49:45.410 PM info: [32mPage Requested: GET /pages/account[39m[49m
