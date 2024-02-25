@@ -1,3 +1,0 @@
-{"level":"info","message":"A new log file was created: logs/2024-02-24/combined-2024-02-24.log","service":"admin-service","timestamp":"2024-02-24 05:05:12.759 PM"}
-{"level":"info","message":"Server is listening on port 8081","service":"admin-service","timestamp":"2024-02-24 05:05:12.761 PM"}
-{"level":"info","message":"Page Requested: GET /pages/index","service":"admin-service","timestamp":"2024-02-24 05:05:51.386 PM"}

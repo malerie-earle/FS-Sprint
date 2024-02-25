@@ -2,6 +2,7 @@ const express = require("express");
 const path = require('path');
 const { myEmitter, logger } = require('./logEvents');
 const { router } = require('./routes');
+const { auth } = require('express-openid-connect'); // Importing Okta authentication middleware
 
 const app = express();
 const PORT = process.env.PORT || 8081;
@@ -9,6 +10,18 @@ const PORT = process.env.PORT || 8081;
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Okta configuration
+const oktaConfig = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: '68ca19da0ea9af83eb1e3089cfd03450d261b9b68ed19965bce7fc2a113f2d0b',
+  baseURL: 'http://localhost:8081', 
+  clientID: 'HE3gFpaQfU2Kz2RCfiEt5KsJGSyW4U2L', 
+  issuerBaseURL: 'https://dev-xmibtuy8xatn474g.us.auth0.com'
+};
+
+app.use(auth(oktaConfig)); // Using Okta authentication middleware
 
 app.get("/", (request, response) => {
   response.redirect("/pages/index");
