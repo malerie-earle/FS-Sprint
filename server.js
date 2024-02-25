@@ -1,31 +1,15 @@
 const express = require("express");
 const path = require('path');
 const { myEmitter, logger } = require('./logEvents');
+const { router } = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.set('view engine', 'ejs');
-
-// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define your route handlers
-app.get("/", (request, response) => {
-  response.redirect("/pages/index");
-});
-
-app.get("/pages/index", (request, response) => {
-  myEmitter.emit('route', request.url);
-  response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
-  logger.log(clc.magenta ({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` }));
-});
-
-app.get("/pages/about", (request, response) => {
-  myEmitter.emit('route', request.url);
-  response.send("the /about route.");
-  logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
-});
+app.use('/', router);
 
 // Handle 404 errors
 app.use((request, response) => {
