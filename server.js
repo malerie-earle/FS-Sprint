@@ -3,11 +3,33 @@ const path = require('path');
 const { myEmitter, logger } = require('./logEvents');
 const { router } = require('./routes');
 
+// Importing functions from separate DAL files
+const { getCustomers } = require('./public/DAL/customer.dal.js');
+const { getVendors } = require('./public/DAL/vendor.dal.js');
+const { getProducts } = require('./public/DAL/product.dal.js');
+
 const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.set('view engine', 'ejs');
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get("/", (request, response) => {
+  response.redirect("/pages/index");
+});
+
+app.get("/pages/index", (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
+  logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
+app.get("/pages/about", (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.send("the /about route.");
+  logger.log({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
 
 app.use('/', router);
 
