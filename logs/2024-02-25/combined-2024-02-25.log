@@ -1,0 +1,5 @@
+[40m2024-02-25 02:59:33.737 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-25 02:59:33.739 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-25 02:59:33.739 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-25 02:59:33.754 PM info: [32mA new log file was created: logs/2024-02-25/combined-2024-02-25.log[39m[49m
+[40m2024-02-25 02:59:33.755 PM info: [32mServer is listening on port 8081[39m[49m

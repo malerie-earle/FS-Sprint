@@ -4,9 +4,9 @@ const { myEmitter, logger } = require('./logEvents');
 const { router } = require('./routes');
 
 // Importing functions from separate DAL files
-const { getCustomers } = require('./DAL/customer.dal');
-const { getVendors } = require('./DAL/vendor.dal');
-const { getProducts } = require('./DAL/product.dal');
+const { getCustomers } = require('./public/DAL/customer.dal.js');
+const { getVendors } = require('./public/DAL/vendor.dal.js');
+const { getProducts } = require('./public/DAL/product.dal.js');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
