@@ -136,3 +136,13 @@ function updateTotal()
     cartCount.style.display='block';
   }
 }
+
+module.exports = {
+  loadProducts,
+  loadContent,
+  addCart,
+  changeQty,
+  removeItem,
+  createCartProduct,
+  updateTotal
+};
