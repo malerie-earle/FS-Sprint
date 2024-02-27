@@ -1,0 +1,51 @@
+[40m2024-02-27 11:47:03.600 AM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:34:46.079 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:34:50.746 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:34:51.998 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:34:57.195 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:34:57.445 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:49:58.810 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:50:02.713 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:50:04.209 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:51:06.263 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:51:30.910 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:51:31.052 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:52:30.068 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:52:36.617 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:52:39.031 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:53:03.376 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:53:07.234 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:53:28.063 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:53:31.634 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:53:33.238 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:54:12.320 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:54:16.341 PM error: [31mError fetching products: role "malerie" does not exist[39m[49m
+[40m2024-02-27 12:56:50.259 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:56:54.227 PM error: [31mError fetching products: role "malerie" does not exist[39m[49m
+[40m2024-02-27 01:06:56.903 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:07:53.566 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:08:00.894 PM error: [31mUncaught Exception: products is not defined[39m[49m
+[40m2024-02-27 01:08:46.980 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:08:52.749 PM error: [31mUncaught Exception: products is not defined[39m[49m
+[40m2024-02-27 01:10:13.541 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:10:18.312 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:16:39.893 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:16:45.539 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:16:48.179 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:17:41.575 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:17:46.441 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:19:38.319 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:19:42.448 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:19:43.746 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:20:08.534 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:20:14.460 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:20:38.340 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:21:30.497 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:31:48.709 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:31:52.809 PM error: [31mError fetching products: Cannot access 'pool' before initialization[39m[49m
+[40m2024-02-27 01:31:54.003 PM error: [31mError fetching products: Cannot access 'pool' before initialization[39m[49m
+[40m2024-02-27 01:33:08.394 PM error: [31mError fetching products: Cannot access 'pool' before initialization[39m[49m
+[40m2024-02-27 01:34:21.403 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:35:18.169 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:58:59.315 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 02:07:20.314 PM error: [31mThis is an error message.[39m[49m

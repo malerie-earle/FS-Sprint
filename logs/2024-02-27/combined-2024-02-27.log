@@ -1,0 +1,145 @@
+[40m2024-02-27 11:47:03.598 AM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 11:47:03.600 AM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 11:47:03.600 AM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 11:47:03.618 AM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 11:47:03.619 AM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 11:47:10.320 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-27 11:47:10.701 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-27 12:34:46.077 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:34:46.079 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:34:46.079 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:34:46.097 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:34:46.097 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:34:50.746 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:34:51.998 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:34:57.195 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:34:57.445 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:49:58.808 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:49:58.810 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:49:58.810 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:49:58.827 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:49:58.828 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:50:02.713 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:50:04.209 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-27 12:51:06.262 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:51:06.263 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:51:06.263 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:51:06.283 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:51:06.285 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:51:30.910 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:51:31.052 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:52:30.067 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:52:30.068 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:52:30.068 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:52:30.087 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:52:30.088 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:52:36.617 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:52:39.031 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:53:03.375 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:53:03.376 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:53:03.376 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:53:03.392 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:53:03.393 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:53:07.234 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:53:28.062 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:53:28.063 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:53:28.063 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:53:28.078 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:53:28.079 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:53:31.634 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:53:33.238 PM error: [31mError fetching products: getProducts is not a function[39m[49m
+[40m2024-02-27 12:54:12.318 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:54:12.319 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:54:12.320 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:54:12.336 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:54:12.337 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:54:16.341 PM error: [31mError fetching products: role "malerie" does not exist[39m[49m
+[40m2024-02-27 12:56:50.257 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 12:56:50.259 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 12:56:50.259 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 12:56:50.277 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 12:56:50.278 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 12:56:54.227 PM error: [31mError fetching products: role "malerie" does not exist[39m[49m
+[40m2024-02-27 01:06:56.901 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:06:56.903 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:06:56.903 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:06:56.923 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:06:56.924 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:07:53.564 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:07:53.566 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:07:53.566 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:07:53.583 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:07:53.584 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:08:00.894 PM error: [31mUncaught Exception: products is not defined[39m[49m
+[40m2024-02-27 01:08:46.979 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:08:46.980 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:08:46.980 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:08:46.999 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:08:46.999 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:08:52.749 PM error: [31mUncaught Exception: products is not defined[39m[49m
+[40m2024-02-27 01:10:13.539 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:10:13.541 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:10:13.541 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:10:13.558 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:10:13.558 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:10:18.312 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:16:39.891 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:16:39.893 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:16:39.893 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:16:39.917 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:16:39.918 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:16:45.539 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:16:48.179 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:17:41.573 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:17:41.575 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:17:41.575 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:17:41.594 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:17:41.594 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:17:46.441 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:19:38.317 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:19:38.318 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:19:38.319 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:19:38.336 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:19:38.337 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:19:42.448 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:19:43.746 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:20:08.533 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:20:08.534 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:20:08.534 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:20:08.551 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:20:08.551 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:20:14.460 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:20:38.339 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:20:38.340 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:20:38.340 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:20:38.357 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:20:38.358 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:21:30.496 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:21:30.497 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:21:30.497 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:21:30.514 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:21:30.514 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:31:48.707 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:31:48.709 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:31:48.709 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:31:48.727 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:31:48.728 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:31:52.809 PM error: [31mError fetching products: Cannot access 'pool' before initialization[39m[49m
+[40m2024-02-27 01:31:54.003 PM error: [31mError fetching products: Cannot access 'pool' before initialization[39m[49m
+[40m2024-02-27 01:33:08.394 PM error: [31mError fetching products: Cannot access 'pool' before initialization[39m[49m
+[40m2024-02-27 01:34:21.401 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:34:21.403 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:34:21.403 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:34:21.420 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:34:21.421 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 01:35:18.169 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 01:58:59.313 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 01:58:59.314 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 01:58:59.315 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 01:58:59.334 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 01:58:59.335 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 02:07:20.312 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 02:07:20.314 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 02:07:20.314 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 02:07:20.332 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 02:07:20.333 PM info: [32mServer is listening on port 8081[39m[49m
