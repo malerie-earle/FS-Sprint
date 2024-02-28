@@ -1,0 +1,105 @@
+[40m2024-02-26 01:27:24.282 AM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 01:27:24.284 AM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 01:27:24.284 AM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 01:27:24.306 AM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 01:27:24.308 AM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 01:27:31.937 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 01:27:32.455 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 01:27:35.995 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 01:34:59.563 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 01:36:21.433 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 01:37:10.580 AM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 01:39:50.757 AM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-26 01:40:02.866 AM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 09:50:02.009 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 09:56:38.411 PM info: [32mPage Requested: GET /pages/checkout[39m[49m
+[40m2024-02-26 09:56:41.708 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 09:56:44.880 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 09:56:46.640 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:16:12.636 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:16:14.948 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:16:17.309 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:16:17.947 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:16:20.452 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:16:31.454 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 10:16:31.456 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 10:16:31.456 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 10:16:31.477 PM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 10:16:31.478 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 10:16:40.434 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:16:47.154 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:16:47.581 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:16:49.218 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:20:10.763 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:20:12.129 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:20:13.297 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:20:13.590 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:20:16.872 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:20:17.137 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:20:19.072 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:28:29.921 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 10:28:29.923 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 10:28:29.923 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 10:28:29.939 PM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 10:28:29.940 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 10:28:39.050 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:30:23.996 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:30:26.688 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:30:30.440 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-26 10:30:30.812 PM error: [31mError fetching products: role "postgres" does not exist[39m[49m
+[40m2024-02-26 10:37:33.449 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 10:37:33.451 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 10:37:33.451 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 10:37:33.469 PM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 10:37:33.470 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 10:44:23.052 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:44:40.428 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:45:24.308 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:45:26.635 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:46:38.870 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:46:39.897 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:46:40.382 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:46:54.455 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:47:05.214 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 10:47:05.216 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 10:47:05.216 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 10:47:05.233 PM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 10:47:05.234 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 10:47:11.347 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:47:15.786 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:53:04.966 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:53:09.023 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:53:09.590 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:53:11.018 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-26 10:53:25.115 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 10:53:25.117 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 10:53:25.118 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 10:53:25.137 PM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 10:53:25.138 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 10:53:31.125 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:53:33.531 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:54:42.498 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:54:46.614 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 10:54:47.582 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:55:18.487 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:55:58.782 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:56:35.000 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:57:03.500 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 10:58:01.686 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 11:23:20.711 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-26 11:23:20.713 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-26 11:23:20.713 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-26 11:23:20.735 PM info: [32mA new log file was created: logs/2024-02-26/combined-2024-02-26.log[39m[49m
+[40m2024-02-26 11:23:20.737 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-26 11:23:29.957 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 11:23:31.850 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 11:24:05.910 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 11:24:13.829 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 11:24:21.070 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-26 11:24:26.359 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 11:24:34.755 PM info: [32mPage Requested: GET /pages/index[39m[49m
+[40m2024-02-26 11:24:52.338 PM info: [32mPage Requested: GET /pages/contact[39m[49m
+[40m2024-02-26 11:25:04.538 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-26 11:25:07.264 PM info: [32mPage Requested: GET /pages/checkout[39m[49m
+[40m2024-02-26 11:25:40.805 PM info: [32mPage Requested: GET /pages/checkout[39m[49m
+[40m2024-02-26 11:48:01.128 PM info: [32mPage Requested: GET /pages/index[39m[49m

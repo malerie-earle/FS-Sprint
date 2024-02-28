@@ -4,12 +4,13 @@ const { Pool } = require('pg');
 
 // Database connection details
 const pool = new Pool({
-  user: 'Postgres',
+  user: 'malerie',
   host: 'localhost',
-  database: 'Newfie Nook',
-  password: 'Alphaomega24!',
-  port: 5433,
+  database: 'NewfieNookDB',
+  password: 'password',
+  port: 5050
 });
+
 
 // Function to fetch products from the database
 const getProducts = async () => {
@@ -17,6 +18,9 @@ const getProducts = async () => {
   try {
     const result = await client.query('SELECT * FROM products');
     return result.rows;
+  } catch (err) {
+    console.error(err);
+    throw err;
   } finally {
     client.release();
   }

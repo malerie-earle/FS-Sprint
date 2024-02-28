@@ -137,7 +137,7 @@ function updateTotal()
   }
 }
 
-module.exports = {
+exports.modules = {
   loadProducts,
   loadContent,
   addCart,

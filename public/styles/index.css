@@ -359,15 +359,58 @@ transform: scale(1.5);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
+  height: fit-content;
   width: 100%;
   border-radius: 10px;
   border: 1px solid #57ff5db1;
-  margin: 20px;
+  margin: 2vh 2vw;
   background-color: #039F4C;
   background: hsla(0, 0%, 12%, 1);
-  background: linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
-  background: -moz-linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
-  background: -webkit-linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: linear-gradient(180deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: -moz-linear-gradient(180deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: -webkit-linear-gradient(180deg, hsla(0, 0%, 12%, 1) 0%, hsla(148, 96%, 32%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
   color: white;
+}
+
+.aboutText {
+  margin: 5vh 8vw;
+}
+
+.checkout {
+  margin: 5vh 8vw;
+}
+
+.prodImg {
+  width: 15vw;
+  height: auto;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin: 5vh 5vw;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ff0080;
+  background-color: #ff0080b4;
+  background: linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(330, 100%, 50%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(330, 100%, 50%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(0, 0%, 12%, 1) 0%, hsla(330, 100%, 50%, 1) 50%, hsla(0, 0%, 12%, 1) 100%);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.3);
+  
+}
+
+.productsH1 {
+  color: black;
 }

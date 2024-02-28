@@ -1,25 +1,31 @@
-// Imports
-const fs = require('fs');
+// routes.js
 const express = require('express');
 const path = require('path');
 const { myEmitter, logger } = require('./logEvents.js');
+const queries = require('./queries');
+const pool = require('./db');
+
 
 // Importing functions from separate DAL files
 const { getCustomers } = require('./public/DAL/customer.dal.js');
 const { getVendors } = require('./public/DAL/vendor.dal.js');
 const { getProducts } = require('./public/DAL/product.dal.js');
 
-
 const router = express.Router();
 
 router.get('/', (request, response) => {
-  response.redirect("/pages/index");
+  response.redirect("/index");
 });
 
-router.get('/pages/index', (request, response) => {
-  myEmitter.emit('route', request.url);
-  response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
-  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+
+router.get('/index', async (request, response) => {
+  try {
+    const products = await getProducts();
+    response.render('index', { products });
+  } catch (error) {
+    logger.error({ level: 'error', message: `Error fetching products: ${error.message}` });
+    response.status(500).send("Internal Server Error");
+  }
 });
 
 router.get('/pages/about', (request, response) => {
@@ -52,57 +58,6 @@ router.get('/pages/checkout', (request, response) => {
   logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
 });
 
-// Route handler for fetching customers
-router.get('/'), async (request, response) => {
-  try {
-    const products = await getProducts();
-    response.render('index', { products });
-  } catch (error) {
-    logger.error({ level: 'error', message: `Error fetching products: ${error.message}` });
-    response.status(500).send("Internal Server Error");
-  }
-
-
-  const dalFilePath = path.join(__dirname, 'public', 'DAL', 'customer.dal.js');
-  fs.readFile(dalFilePath, 'utf-8', (error, data) => {
-    if (error) {
-      logger.error({ level: 'error', message: `Error reading file: ${error.message}` });
-      response.status(500).send("Internal Server Error");
-    } else {
-      response.type('text/plain');
-      response.send(data);
-    }
-  });
-};
-
-// Route handler for fetching vendors
-router.get('show-dal'), (request, response) => {
-  const dalFilePath = path.join(__dirname, 'public', 'DAL', 'vendor.dal.js');
-  fs.readFile(dalFilePath, 'utf-8', (error, data) => {
-    if (error) {
-      logger.error({ level: 'error', message: `Error reading file: ${error.message}` });
-      response.status(500).send("Internal Server Error");
-    } else {
-      response.type('text/plain');
-      response.send(data);
-    }
-  });
-};
-
-// Route handler for fetching products
-router.get('show-dal'), (request, response) => {
-  const dalFilePath = path.join(__dirname, 'public', 'DAL', 'product.dal.js');
-  fs.readFile(dalFilePath, 'utf-8', (error, data) => {
-    if (error) {
-      logger.error({ level: 'error', message: `Error reading file: ${error.message}` });
-      response.status(500).send("Internal Server Error");
-    } else {
-      response.type('text/plain');
-      response.send(data);
-    }
-  });
-};
-
 // Create a new folder
 function createFolder(request, response) {
   const folderName = 'newFolder';
@@ -132,7 +87,4 @@ function fetchFile(fileName, response) {
   });
 }
 
-module.exports = {
-  router,
-  createFolder
-  }
+module.exports = router;

@@ -26,6 +26,12 @@
  
 // Imports
 const fs = require("fs");
+const db = require('./queries')
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+const db = require('./queries')
+const port = 3000
 
 // Import user management functions from userManagement.js
 const {
@@ -39,6 +45,7 @@ const { myEmitter, logger } = require('./logEvents.js');
 
 // Import the config.js module and configure the app
 const { configApp } = require('./config.js'); 
+const { start } = require("repl");
 
 // Get the command line arguments
 const myArgs = process.argv.slice(2); 
@@ -46,6 +53,27 @@ myEmitter.emit('event', 'app', 'INFO', 'The app has started.');
 if (myArgs.length >= 1) {
     myEmitter.emit('event', 'app', 'INFO', `The app.args: ${myArgs}`);
 }
+
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
+
+app.get('/', (request, response) => {
+  response.json({ info: 'Node.js, Express, and Postgres API' })
+})
+
+app.get('/users', db.getUsers)
+app.get('/users/:id', db.getUserById)
+app.post('/users', db.createUser)
+app.put('/users/:id', db.updateUser)
+app.delete('/users/:id', db.deleteUser)
+
+app.listen(port, () => {
+  console.log(`App running on port ${port}.`)
+})
 
 // Switch statement to handle the command line arguments
 switch (myArgs[0]) {
