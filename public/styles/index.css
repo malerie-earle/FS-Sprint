@@ -53,6 +53,24 @@ button[type="submit"]:hover {
   background-color: #ff0080b4;
 }
 
+/* CSS to style the button */
+button {
+  background-color: #ff0080b4; 
+  color: white; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  border: none; 
+  cursor: pointer; 
+  display: block; 
+  margin: 0 auto; 
+  border-radius: 4px;
+  cursor: pointer;
+
+
+}
+
+
+
 .announcementBar {
   width: 100%;
   height: 5vh;
