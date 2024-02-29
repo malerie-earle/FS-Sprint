@@ -1,14 +1,12 @@
 const express = require('express');
 const path = require('path');
 const { myEmitter, logger } = require('./logEvents.js');
-const queries = require('.queries.js');
+const queries = require('./queries.js');
 const fs = require('fs');
 
 
 // Importing functions from separate DAL files
-const { getCustomers } = require('./DAL/customer.dal.js');
-const { getVendors } = require('./DAL/vendor.dal.js');
-const { getProducts } = require('./DAL/product.dal.js');
+const { getProducts } = require('./public/DAL/product.dal.js');
 
 const router = express.Router();
 
@@ -16,7 +14,7 @@ router.get('/', (request, response) => {
   response.redirect("/index");
 });
 
-
+// Routes
 router.get('/index', async (request, response) => {
   try {
     const products = await getProducts();
