@@ -1,8 +1,6 @@
-// server.js
 const express = require("express");
 const path = require('path');
 const bodyParser = require('body-parser'); // Added body-parser
-const jwt = require('jsonwebtoken'); // Added jsonwebtoken
 const { myEmitter, logger } = require('./logEvents');
 const router = require('./routes'); 
 
@@ -28,11 +26,8 @@ app.post('/login', (req, res) => {
         return res.status(400).json({ error: 'Username is required' });
     }
 
-    // Generate token
-    const token = jwt.sign({ username }, 'secret_key', { expiresIn: '1h' });
-
-    // Send token back to the user
-    res.json({ token });
+    // Assuming successful authentication, redirect to success page
+    res.redirect('/pages/success'); // Adjust the URL as per your folder structure
 });
 
 app.use((request, response) => {

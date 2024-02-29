@@ -1,4 +1,3 @@
-// routes.js
 const express = require('express');
 const path = require('path');
 const { myEmitter, logger } = require('./logEvents.js');
@@ -55,6 +54,12 @@ router.get('/pages/users', (request, response) => {
 router.get('/pages/checkout', (request, response) => {
   myEmitter.emit('route', request.url);
   response.sendFile(path.join(__dirname, 'public', 'pages', 'checkout.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
+router.get('/pages/success', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'success.html'));
   logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
 });
 
