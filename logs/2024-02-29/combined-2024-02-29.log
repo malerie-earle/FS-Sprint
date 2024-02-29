@@ -45,3 +45,10 @@
 [40m2024-02-29 10:59:17.312 AM info: [32mPage Requested: GET /pages/success[39m[49m
 [40m2024-02-29 10:59:19.278 AM info: [32mPage Requested: GET /pages/account[39m[49m
 [40m2024-02-29 10:59:25.698 AM info: [32mPage Requested: GET /pages/success[39m[49m
+[40m2024-02-29 01:27:42.919 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-29 01:27:42.920 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-29 01:27:42.920 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-29 01:27:42.957 PM info: [32mA new log file was created: logs/2024-02-29/combined-2024-02-29.log[39m[49m
+[40m2024-02-29 01:27:42.958 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-29 01:33:47.787 PM info: [32mPage Requested: GET /pages/account[39m[49m
+[40m2024-02-29 01:35:16.576 PM info: [32mPage Requested: GET /pages/account[39m[49m
