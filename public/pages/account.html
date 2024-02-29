@@ -113,13 +113,18 @@
   </div>  
   </nav>
 
-  <div class ="banner">
-    <img src = "/images/nlbanner.png" alt = "Newfoundland Banner" class = "bannerImg" />
-  </div>
-</header>
-  <div class="home">
+  <h2>Login</h2>
+  <form id="loginForm" action="/login" method="post"> <!-- Add action and method -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Submit</button>
+  </form>
 
-</div>
+
+  <script src="/scripts/scripts.js"></script>
+</body>
+</html>
+  
   <!-- {isCartVisible && (
     <div className="shoppingCartDropdown">
       <h2>Shopping Cart</h2>
@@ -246,6 +251,3 @@
 </div>
   
 </footer> -->
-<script src="/scripts/scripts.js"></script>
-</body>
-</html>

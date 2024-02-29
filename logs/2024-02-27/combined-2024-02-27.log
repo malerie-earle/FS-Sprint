@@ -143,3 +143,85 @@
 [40m2024-02-27 02:07:20.314 PM error: [31mThis is an error message.[39m[49m
 [40m2024-02-27 02:07:20.332 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
 [40m2024-02-27 02:07:20.333 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 09:52:58.115 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 09:52:58.117 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 09:52:58.117 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 09:52:58.143 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 09:52:58.144 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 09:53:05.514 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 09:53:11.132 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 09:53:12.962 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 09:55:01.991 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 09:55:03.115 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:35:37.652 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 10:35:37.654 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 10:35:37.654 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 10:35:37.672 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 10:35:37.673 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 10:35:52.554 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:35:55.474 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:35:56.182 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:36:17.642 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 10:36:17.643 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 10:36:17.643 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 10:36:17.661 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 10:36:17.661 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 10:36:24.102 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:36:25.066 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:36:25.446 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:36:26.417 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:09.086 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 10:39:09.088 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 10:39:09.088 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 10:39:09.109 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 10:39:09.110 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 10:39:16.289 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:16.940 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:17.620 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:17.964 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:18.430 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:18.677 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:18.910 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:39:19.130 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:40:15.802 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 10:40:15.803 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 10:40:15.803 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 10:40:15.820 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 10:40:15.821 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 10:40:20.521 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:42:40.843 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 10:42:40.845 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 10:42:40.845 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 10:42:40.864 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 10:42:40.865 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 10:42:45.289 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:46:36.900 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:46:38.036 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 10:46:43.137 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:46:45.340 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 10:46:51.720 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:46:56.546 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-27 10:47:25.894 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 10:47:45.727 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 10:47:48.464 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 10:47:50.793 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 10:47:53.321 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-27 10:47:56.678 PM info: [32mPage Requested: GET /pages/contact[39m[49m
+[40m2024-02-27 10:56:36.793 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 11:05:07.746 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 11:05:07.747 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 11:05:07.747 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 11:05:07.766 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 11:05:07.767 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 11:05:13.149 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 11:20:18.153 PM info: [32mPage Requested: GET /pages/about[39m[49m
+[40m2024-02-27 11:20:26.468 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 11:21:26.352 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 11:21:27.869 PM error: [31mError fetching products: [39m[49m
+[40m2024-02-27 11:21:35.905 PM info: [32mThis is an information message.[39m[49m
+[40m2024-02-27 11:21:35.907 PM warn: [35mThis is a warning message.[39m[49m
+[40m2024-02-27 11:21:35.907 PM error: [31mThis is an error message.[39m[49m
+[40m2024-02-27 11:21:35.925 PM info: [32mA new log file was created: logs/2024-02-27/combined-2024-02-27.log[39m[49m
+[40m2024-02-27 11:21:35.926 PM info: [32mServer is listening on port 8081[39m[49m
+[40m2024-02-27 11:21:47.851 PM error: [31m404 - route not found.[39m[49m
+[40m2024-02-27 11:21:52.208 PM error: [31m404 - route not found.[39m[49m
