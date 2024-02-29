@@ -1,14 +1,14 @@
 const express = require('express');
 const path = require('path');
 const { myEmitter, logger } = require('./logEvents.js');
-const queries = require('./queries');
-const pool = require('./db');
+const queries = require('.queries.js');
+const fs = require('fs');
 
 
 // Importing functions from separate DAL files
-const { getCustomers } = require('./public/DAL/customer.dal.js');
-const { getVendors } = require('./public/DAL/vendor.dal.js');
-const { getProducts } = require('./public/DAL/product.dal.js');
+const { getCustomers } = require('./DAL/customer.dal.js');
+const { getVendors } = require('./DAL/vendor.dal.js');
+const { getProducts } = require('./DAL/product.dal.js');
 
 const router = express.Router();
 
@@ -23,7 +23,7 @@ router.get('/index', async (request, response) => {
     response.render('index', { products });
   } catch (error) {
     logger.error({ level: 'error', message: `Error fetching products: ${error.message}` });
-    response.status(500).send("Internal Server Error");
+    response.sendFile(path.join(__dirname, 'public', 'pages', 'index.html'));
   }
 });
 
