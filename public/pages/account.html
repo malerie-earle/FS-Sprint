@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newfie Nook</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <header>
+    <div class = "announcementBar">
+      <h2>Discover Favourite Treats & Local Treasures From The Rock!</h2>
+    </div>
+  
+    <nav> 
+      <div class = "navBox" id = "navBox1">
+        <a href = "/">
+          <img src = "/images/home (1).png" alt = "Home" class = "icon" id = "homeIcon" />
+        </a>
+      </div>
+  
+      <div class = "navBox" id = "navBox2">
+        <a href = "/pages/contact">
+          <img src = "/images/email.png" alt = "Contact" class = "icon" id = "contactIcon" />
+        </a>
+      </div>
+      
+      <img src = "/images/nlNookLogo.png" alt = "Newfie Nook Logo" class = "logo" />
+  
+      <div class = "navBox" id = "navBox3">
+        <a href = "/pages/about">
+          <img src = "/images/information.png" alt = "About" class = "icon" id = "infoIcon" />
+        </a>
+      </div>
+  
+      <div class = "navBox" id = "navBox4">
+        <a href = "/pages/account">
+          <img src = "/images/profile.png" alt = "LogIn" class = "icon" id = "logInIcon" />
+        </a>
+      </div>
+  
+    </div>
+    </nav>
+  </header>
+
+<div class = "home">
+  <h2>Login</h2>
+  <form id="loginForm" action="/login" method="post"> <!-- Add action and method -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>New user? Register Here:</h2>
+<form id="registerForm" action="/register" method="post">
+  <label for="newUsername">Create Username:</label>
+  <input type="text" id="newUsername" name="newUsername" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <button type="submit">Register</button>
+</form>
+</div>
+
+  <script src="/scripts/scripts.js"></script>
+</body>
+</html>
+  

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newfie Nook</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <header>
+    <div class = "announcementBar">
+      <h2>Discover Favourite Treats & Local Treasures From The Rock!</h2>
+    </div>
+  
+    <nav> 
+      <div class = "navBox" id = "navBox1">
+        <a href = "/">
+          <img src = "/images/home (1).png" alt = "Home" class = "icon" id = "homeIcon" />
+        </a>
+      </div>
+  
+      <div class = "navBox" id = "navBox2">
+        <a href = "/pages/contact">
+          <img src = "/images/email.png" alt = "Contact" class = "icon" id = "contactIcon" />
+        </a>
+      </div>
+      
+      <img src = "/images/nlNookLogo.png" alt = "Newfie Nook Logo" class = "logo" />
+  
+      <div class = "navBox" id = "navBox3">
+        <a href = "/pages/about">
+          <img src = "/images/information.png" alt = "About" class = "icon" id = "infoIcon" />
+        </a>
+      </div>
+  
+      <div class = "navBox" id = "navBox4">
+        <a href = "/pages/account">
+          <img src = "/images/profile.png" alt = "LogIn" class = "icon" id = "logInIcon" />
+        </a>
+      </div>
+  
+    </div>
+    </nav>
+  </header>
+  <div class="home">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-37eeb31b-64c5-48e1-ab02-d00502a79e24" data-elfsight-app-lazy></div>
+  </div>
+<script src="/scripts/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+  <!-- {isCartVisible && (
+    <div className="shoppingCartDropdown">
+      <h2>Shopping Cart</h2>
+      <div className="cartItems">
+        <ShoppingCart />
+      </div>
+    </div>
+  )}
+  
+
+{showAddedToCartAlert && (
+  <div className="addedToCartAlert">
+    Added to cart!
+  </div>
+)}
+
+<div className="categories">
+  <div className="category"> 
+    {categories.map((category, index) => (
+      <p key={index}>
+        <button
+          key={index}
+          className={selectedCategory && selectedCategory.includes(category) ? "categoryBar categoryBarSelect" : "categoryBar"}
+          onClick={() => handleCategoryToggle(category)}
+        >
+          {category}
+        </button>
+      </p>
+    ))}
+
+    <button
+      className="showAllBtn"
+      onClick={() => {
+        handleCategoryToggle(null);
+        setDisplayedProducts(shuffledProducts);
+      }}
+    >
+      Show All
+    </button>
+
+    <h2 className="sortBy">Sort By: </h2>
+    <button className="sortBtn" onClick={sortProducts}>
+      {sortButtonText}
+    </button>
+  </div>
+</div>
+
+<div className="productList">
+  <div className="listedProduct">
+    {displayedProducts.map((product) => (
+      <div className="item" key={product.id}>
+        <div className="productTitle">
+          <h3 className="h3Title">{product.title}</h3>
+        </div>
+
+        <div className="productImage">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="image"
+            onClick={() => handleProductClick(product)}
+          />
+        </div>
+
+        <p className="productPrice">${product.price}</p>
+        <div className="productDetails">
+          <div className="productActions">
+            <label>
+              Qty:
+              <input
+                className="qtyInput"
+                type="number"
+                min="1"
+                value={quantities[product.id] || 1}
+                onChange={(e) => handleQuantityChange(product, parseInt(e.target.value, 10))}
+              />
+            </label>
+            <div className="addCartBtn">
+              <button
+                className="addCartBtn"
+                onClick={() => handleAddToCart(product)}
+              >
+                <img
+                  src={addCartIcon}
+                  alt="Add to Cart"
+                  className="icon"
+                  id="addCartIcon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+{selectedProduct && (
+  <ProductDetailsModal
+    product={selectedProduct}
+    onClose={handleCloseModal}
+  />
+)}
+<footer>
+  <ScrollToTop smooth className = "scrollTop" />
+  <p>
+  © Copyright Python Pink - 2023
+  </p>
+  <a href = "https://github.com/RyanGuinchard/Semester2-Final-Sprint/" target="_blank" >
+  <img src = {github} alt = "GitHub Repo" className = "githubImg" /></a>
+<div className = "collaborators">
+
+<a href = "#" target="_blank">
+<h3 className = "collaborators">Christopher Cormier</h3></a><br />
+
+<a href = "#" target="_blank">
+<h3 className = "collaborators">Malerie Earle</h3></a><br />
+
+<a href = "https://ryanguinchard.github.io/Portfolio2023-2024/" target="_blank">
+<h3 className = "collaborators">Ryan Guinchard</h3></a><br />
+
+<a href = "http://justins-portfolio.netlify.app" target="_blank">
+<h3 className = "collaborators">Justin Whelan</h3></a><br />
+</div>
+  
+</footer> -->

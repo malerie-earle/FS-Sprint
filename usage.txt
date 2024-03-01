@@ -1,0 +1,31 @@
+
+Usage:
+
+
+app command                             option
+
+
+app --help                              displays help.
+
+
+app init                                initialize the application.
+app init --mk                           create all the application folders.
+app init --cat                          create all the application files.
+app init --all                          create all the folders and files.
+
+
+app config                              create or change the app configuration.
+app config --show                       show the contents off the config file.
+app config --reset                      reset back to default the config file.
+app config --set                        set a specific config setting.
+
+app token --help                        displays help for the token command.
+app token --count                       displays a count of the tokens created.
+app token --new <username>              generates a token for a given username.
+                                        saves tokens to the json file.
+
+app token --upd p <username> <phone>    updates the json entry with a new phone number.
+app token -- upd e <username> <email>   updates the json entry with a new email.
+app token --search u <username>         fetches a token for a given username.
+app token --search e <email>            fetches a token for a given email.
+app token --search p <phone>            fetches a token for a given phone number.
