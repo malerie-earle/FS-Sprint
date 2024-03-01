@@ -1,8 +1,0 @@
-{
-  "name": "Application CLI",
-  "version": "1.0.0",
-  "description": "The Command Line Interface (CLI) for the Application in Sprint 1",
-  "main": "app.js",
-  "superuser": "admin",
-  "database": "sample"
-}
