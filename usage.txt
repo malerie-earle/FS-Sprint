@@ -15,7 +15,7 @@ app init --all                          create all the folders and files.
 
 
 app config                              create or change the app configuration.
-app config --show                       show the contents off the config file.
+app config --show                       show the contents of the config file.
 app config --reset                      reset back to default the config file.
 app config --set                        set a specific config setting.
 
