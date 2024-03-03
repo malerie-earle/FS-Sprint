@@ -1,6 +1,4 @@
-
 Usage:
-
 
 app command                             option
 
@@ -16,16 +14,17 @@ app init --all                          create all the folders and files.
 
 app config                              create or change the app configuration.
 app config --show                       show the contents of the config file.
+app config --set                        set a specific config setting. (input key:value)
 app config --reset                      reset back to default the config file.
-app config --set                        set a specific config setting.
 
-app token --help                        displays help for the token command.
-app token --count                       displays a count of the tokens created.
-app token --new <username>              generates a token for a given username.
-                                        saves tokens to the json file.
+app token <username>                    generate a token for a given username.
+                                        saves tokens to the token.json file.
 
-app token --upd p <username> <phone>    updates the json entry with a new phone number.
-app token -- upd e <username> <email>   updates the json entry with a new email.
-app token --search u <username>         fetches a token for a given username.
-app token --search e <email>            fetches a token for a given email.
-app token --search p <phone>            fetches a token for a given phone number.
+app updateUser --username <username> --email <new_email>
+    Set or update the email for the user record with the given username.
+
+app updateUser --username <username> --phone <new_phone>
+    Set or update the phone number for the user record with the given username.
+
+app searchUser --queryType <type> --queryValue <value>
+    search for a user record queried by username, email, or phone number.

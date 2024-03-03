@@ -4,9 +4,9 @@ const configjson = { // default configuration settings
     name: 'Application CLI',
     version: '1.0.0',
     description: 'The Command Line Interface (CLI) for the Application in Sprint 1.',
-    main: 'app.js',
+    main: 'cli.js',
     superuser: 'admin',
-    database: 'sample'
+    database: 'Newfie Nook'
 
    
 };
@@ -18,7 +18,7 @@ const tokenjson = [{
     phone: '1234567890',
     token: 'token',
     expires: '2024-12-31 10:00:00',
-    confirmed: 'tbd'
+    confirmed: 'YES'
 
   }];
 

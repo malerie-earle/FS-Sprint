@@ -61,6 +61,13 @@ router.get('/pages/success', (request, response) => {
   logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
 });
 
+router.get('/verify.html', (request, response) => {
+  myEmitter.emit('route', request.url);
+  response.sendFile(path.join(__dirname, 'public', 'pages', 'verify.html'));
+  logger.info({ level: 'info', message: `Page Requested: ${request.method} ${request.url}` });
+});
+
+
 // Create a new folder
 function createFolder(request, response) {
   const folderName = 'newFolder';

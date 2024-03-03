@@ -78,3 +78,83 @@ Submission:
 Submit the recorded demo video along with the project documentation for evaluation.
 Double-check that all necessary components are included and properly organized.
 Breaking it down like this should help you tackle each aspect of the project systematically. If you have any specific questions about any of these tasks, feel free to ask!
+
+//Updated ReadMe
+
+User Management CLI & Web Server
+
+Description
+
+This project is a Full Stack JavaScript application consisting of a Command Line Interface (CLI) and a web server. The CLI is used for system administration tasks such as initializing the application, managing configuration settings, generating user tokens, updating user records, and searching for user records. The web server hosts a simple web form that allows new users to generate a token for account confirmation.
+
+Getting Started
+
+Prerequisites
+Ensure you have Node.js and npm installed on your system.
+
+Installation
+Clone the repository:
+
+git clone [<repository-url>](https://github.com/malerie-earle/FS-Sprint.git)
+
+Install dependencies:
+npm install
+
+Usage
+CLI
+
+To use the CLI, navigate to the project directory and run the following commands:
+
+
+# Initialize the application
+app init
+
+# Create all the application folders
+app init --mk
+
+# Create all the application files
+app init --cat
+
+# Create all the folders and files
+app init --all
+
+# Create or change the app configuration
+app config
+
+# Show the contents of the config file
+app config --show
+
+# Reset back to default the config file
+app config --reset
+
+# Set a specific config setting
+app config --set <key> <value>
+
+# Generate a token for a given username
+app token <username>
+
+# Set or update the email for the user record with the given username
+app updateUser --username <username> --email <new_email>
+
+# Set or update the phone number for the user record with the given username
+app updateUser --username <username> --phone <new_phone>
+
+# Search for a user record queried by username, email, or phone number
+app searchUser --queryType <type> --queryValue <value>
+Web Server
+
+To start the web server, run:
+
+
+npm start
+Then, visit http://localhost:8081 in your web browser to access the website.
+
+Contributors
+
+Malerie Earle
+Janeil Carroll
+Kateryna Danevych
+
+License
+
+Creative Commons.

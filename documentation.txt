@@ -1,0 +1,142 @@
+Project Documentation: FullStack JavaScript Sprint 1
+
+Table of Contents
+
+Overview
+
+Tasks
+Task 1: Initialize Application
+Task 2: Implement CLI
+Task 3: Create Web Server
+Task 4: Configuration Management
+Task 5: Token Generation
+Task 6: User Record Management
+Task 7: Web Form for Token Generation
+Installation
+Usage
+Testing
+Contributing
+License
+
+Overview
+
+This project is a Full Stack JavaScript application that includes a Command Line Interface (CLI) and a web server. 
+It facilitates system administration tasks such as initializing the application, managing configuration settings, 
+generating user tokens, updating user records, and searching for user records.
+
+Tasks
+
+Task 1: Initialize Application
+
+Created directory structure for the application.
+Added default configuration and help files.
+Implemented CLI command to initialize the application.
+
+Task 2: Implement CLI
+
+Created CLI commands for various functionalities:
+Configuration management.
+Token generation.
+User record management.
+Implemented functionality to read and modify configuration settings.
+Integrated token generation module for CLI usage.
+CLI file: cli.js
+
+Task 3: Create Web Server
+
+Set up Express.js server for hosting the web application.
+Developed a simple web form for generating tokens.
+Integrated token generation functionality with the web server.
+Server files: server.js, routes.js
+
+Task 4: Configuration Management
+
+Implemented logic for managing configuration settings.
+Created a JSON configuration file (config.json).
+Added CLI commands for viewing, resetting, and updating configuration.
+
+Task 5: Token Generation
+
+Developed a module for generating unique user tokens.
+Integrated token generation functionality with both CLI and web server.
+Tokens are being written to token.json.
+
+Task 6: User Record Management
+
+Implemented CLI commands for updating and searching user records.
+Created JSON file (users.json) to store user records.
+Added functionality to update user email and phone number.
+
+Task 7: Web Form for Token Generation
+
+Designed and implemented a user-friendly web form for generating tokens.
+Ensured seamless integration with the token generation module.
+HTML pages and CSS styling are included for the web interface.
+
+Task 8: Logging and Error Handling
+
+Implemented logging and error handling throughout the project to ensure robustness
+and ease of troubleshooting. The following actions were taken:
+
+Logging Implementation:
+
+Utilized the winston or log4js library to implement logging functionality.
+Configured logging to capture relevant information such as CLI commands executed, web server requests,
+token generation events, and error messages.
+Log files were stored in a designated directory (logs/) with appropriate rotation and retention policies
+to manage file size and ensure data integrity.
+Logged information included timestamps, severity levels, and contextual details to facilitate easy
+analysis and debugging.
+
+Error Handling:
+
+Implemented comprehensive error handling mechanisms to gracefully manage unexpected
+situations and failures.
+
+Utilized try-catch blocks and error middleware to capture and handle exceptions at
+various levels of the application.
+
+Errors were logged along with relevant contextual information to aid in identifying the
+root cause of issues.
+
+Error responses were appropriately formatted and communicated to users or client applications
+to provide meaningful feedback and guidance.
+
+Integration with CLI and Web Server:
+
+Integrated logging and error handling modules seamlessly with both the CLI and
+web server components.
+
+CLI commands and web server routes were instrumented to log relevant actions and
+capture errors encountered during execution.
+
+Error responses from the web server were appropriately logged and communicated
+to clients to ensure transparency and accountability.
+
+Testing and Validation:
+
+Conducted thorough testing and validation of logging and error handling functionality
+under various scenarios and edge cases.
+
+Unit tests were developed to verify the correct behavior of logging mechanisms
+and error handling strategies.
+
+Emulated error conditions and monitored logging outputs to validate the effectiveness
+and accuracy of error detection and reporting.
+
+By implementing robust logging and error handling practices, the project aims to
+enhance reliability, maintainability, and observability, thereby enabling smooth operation
+and efficient troubleshooting in production environments.
+
+Installation
+
+To install and run the application locally, follow the instructions in the Installation section of the README.
+
+Usage
+
+Refer to the Usage section of the README for detailed instructions on using the CLI and accessing the web server.
+
+Contributions
+
+This project was built by Malerie Earle, Janeil Carroll and Kateryna Danevych.
+

@@ -3,83 +3,142 @@
 const { program } = require('commander');
 const fs = require('fs');
 const userManagement = require('./userManagement.js');
+const { configjson, tokenjson } = require('./templates.js'); // Import config.json and token.json
 
-// Function to initialize the application
+
+// app init command function
 function initCommand(options) {
     if (options.mk) {
-        // Create directories
-        // Code to create directories
+        fs.mkdirSync('folder1');
+        fs.mkdirSync('folder2');
+        console.log("Created all application folders.");
     } else if (options.cat) {
-        // Create files
-        // Code to create files
+        fs.writeFileSync('file1.txt', 'Content for file1');
+        fs.writeFileSync('file2.txt', 'Content for file2');
+        console.log("Created all application files.");
     } else if (options.all) {
-        // Create directories and files
-        // Code to create both directories and files
+        fs.mkdirSync('folder3');
+        fs.writeFileSync('file3.txt', 'Content for file3');
+        console.log("Created all folders and files.");
     } else {
-        // Initialize application
         console.log("Initializing the application...");
-        // Code to initialize application
-        // For example:
-        // userManagement.init();
+        
     }
 }
 
-// Function to handle config command
+// app config command function
 function configCommand(options) {
     if (options.show) {
-        // Display configuration
-        console.log("Displaying configuration...");
-        // Code to display configuration
-        // For example:
-        // userManagement.showConfig();
+        console.log(configjson); // Use config.json directly
     } else if (options.reset) {
-        // Reset configuration
-        console.log("Resetting configuration to default...");
-        // Code to reset configuration
-        // For example:
-        // userManagement.resetConfig();
+        const defaultConfig = {
+            "name": "CLI",
+            "version": "1.0.0",
+            "description": "The Command Line Interface (CLI) for the Application in Sprint 1",
+            "main": "cli.js",
+            "superuser": "admin",
+            "database": "Newfie Nook"
+        };
+        fs.writeFileSync('config.json', JSON.stringify(defaultConfig, null, 2));
+        console.log('Config file reset to default.');
     } else if (options.set) {
-        // Set configuration
-        console.log("Setting configuration...");
-        // Code to set configuration
-        // For example:
-        // userManagement.setConfig();
+        const setting = options.set.split(':')[0];
+        const value = options.set.split(':')[1];
+        if (setting && value) {
+            const configData = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+            configData[setting.trim()] = value.trim();
+            fs.writeFileSync('config.json', JSON.stringify(configData, null, 2));
+            console.log(`Configuration updated: ${setting} set to ${value}`);
+        } else {
+            console.log('Invalid format for --set option. Use --set key:value');
+        }
     } else {
         console.log("No valid option specified for config command.");
     }
 }
 
-// Function to handle token command
+
+// Function to generate token based on username 
 function tokenCommand(username) {
-    // Generate token for the given username
-    console.log(`Generating token for ${username}...`);
-    // Code to generate token
-    // For example:
-    // const token = userManagement.generateToken(username);
+    try {
+        console.log(`Generating token for ${username}...`);
+        const token = generateToken(); // Generate a new token
+        let tokens = [];
+        if (fs.existsSync('token.json')) {
+            const data = fs.readFileSync('token.json');
+            tokens = JSON.parse(data);
+        }
+        tokens.push({ username: username, token: token });
+        fs.writeFileSync('token.json', JSON.stringify(tokens, null, 2));
+        console.log(`Token generated and saved for ${username}`);
+    } catch (error) {
+        console.error('Error generating token:', error);
+    }
 }
 
-// Function to handle updating user records
+function generateToken() {
+    // Logic to generate a random token 
+    const tokenLength = 10;
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let token = '';
+    for (let i = 0; i < tokenLength; i++) {
+        token += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return token;
+}
+
+// Function to update user information
 function updateUserCommand(options) {
-    // Update user records email and/or phone number
-    console.log(`Updating user record for ${options.username}...`);
-    // Code to update user record
-    // For example:
-    // userManagement.updateUser(options);
+    if (options.username) {
+        console.log(`Updating user record for ${options.username}...`);
+        const userData = JSON.parse(fs.readFileSync('user.json', 'utf8'));
+        const usersToUpdate = userData.filter(user => user.username === options.username);
+        if (usersToUpdate.length > 0) {
+            usersToUpdate.forEach(user => {
+                user.email = options.email || user.email;
+                user.phone = options.phone || user.phone;
+            });
+            fs.writeFileSync('user.json', JSON.stringify(userData, null, 2));
+            console.log(`User record updated for ${options.username}`);
+        } else {
+            console.log(`User ${options.username} not found.`);
+        }
+    } else {
+        console.log("Username not provided.");
+    }
 }
 
-// Function to handle searching user records
+
+// Function to search for a user record
 function searchUserCommand(options) {
-    // Search for user record queried by username, email, or phone number
     console.log(`Searching user record for ${options.queryType} ${options.queryValue}...`);
-    // Code to search user record
-    // For example:
-    // const userRecord = userManagement.searchUser(options);
+    const userData = JSON.parse(fs.readFileSync('user.json', 'utf8'));
+    let foundUser = null;
+    switch (options.queryType) {
+        case 'username':
+            foundUser = Object.values(userData).find(user => user.username === options.queryValue);
+            break;
+        case 'email':
+            foundUser = Object.values(userData).find(user => user.email === options.queryValue);
+            break;
+        case 'phone':
+            foundUser = Object.values(userData).find(user => user.phone === options.queryValue);
+            break;
+        default:
+            console.log("Invalid query type.");
+            break;
+    }
+    if (foundUser) {
+        console.log("User found:", foundUser);
+    } else {
+        console.log("User not found.");
+    }
 }
 
-// Define CLI commands and options
+
 program
     .version('1.0.0')
-    .description('CLI application');
+    .description('CLI');
 
 program
     .command('init')
@@ -93,7 +152,7 @@ program
     .command('config')
     .option('--show', 'Show the contents of the config file')
     .option('--reset', 'Reset back to default the config file')
-    .option('--set', 'Set a specific config setting')
+    .option('--set <setting> <value>', 'Set a specific config setting')
     .description('Create or change the app configuration')
     .action(configCommand);
 
@@ -117,5 +176,10 @@ program
     .description('Search for a user record queried by username, email, or phone number')
     .action(searchUserCommand);
 
-// Parse command line arguments
+module.exports = {
+    tokenCommand,
+    updateUserCommand,
+    searchUserCommand
+};
+
 program.parse(process.argv);

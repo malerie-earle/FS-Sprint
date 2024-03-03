@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/verify.css">
+
+    <title>Account Verification</title>
+</head>
+<body>
+    <header>
+        <div class = "announcementBar">
+          <h2>Discover Favourite Treats & Local Treasures From The Rock!</h2>
+        </div>
+      
+        <nav> 
+          <div class = "navBox" id = "navBox1">
+            <a href = "/">
+              <img src = "/images/home (1).png" alt = "Home" class = "icon" id = "homeIcon" />
+            </a>
+          </div>
+      
+          <div class = "navBox" id = "navBox2">
+            <a href = "/pages/contact">
+              <img src = "/images/email.png" alt = "Contact" class = "icon" id = "contactIcon" />
+            </a>
+          </div>
+          
+          <img src = "/images/nlNookLogo.png" alt = "Newfie Nook Logo" class = "logo" />
+      
+          <div class = "navBox" id = "navBox3">
+            <a href = "/pages/about">
+              <img src = "/images/information.png" alt = "About" class = "icon" id = "infoIcon" />
+            </a>
+          </div>
+      
+          <div class = "navBox" id = "navBox4">
+            <a href = "/pages/account">
+              <img src = "/images/profile.png" alt = "LogIn" class = "icon" id = "logInIcon" />
+            </a>
+          </div>
+      
+        </div>
+        </nav>
+      </header>
+    <p>Ready to dive back in? Just a quick 'Verify Now' to ensure it's still you.</p>
+    <p id="tokenDisplay"></p>
+    <form id="verificationForm" action="/verify-token" method="POST">
+        <input type="hidden" id="tokenInput" name="token" value="">
+        <span id="tokenDisplay"></span><br>
+        <label for="tokenInputField">Enter the code to verify your account:</label><br>
+        <input type="text" id="tokenInputField" name="tokenInput" maxlength="4" required><br>
+        <input type="submit" value="Verify Now">
+    </form>
+    
+    <script>
+        // Function to extract token from URL query parameter
+        function extractToken() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('token') || '';
+        }
+    
+        // Function to display only the last four characters of the token on the page
+        function displayLastFourCharacters(token) {
+            const lastFourCharacters = token.slice(-4);
+            document.getElementById('tokenDisplay').textContent = lastFourCharacters;
+            document.getElementById('tokenInput').value = token;
+        }
+    
+        // Call displayLastFourCharacters function when the page loads
+        window.onload = () => {
+            const token = extractToken();
+            displayLastFourCharacters(token);
+        };
+    </script>
+    
+    
+    
+</body>
+</html>

@@ -110,7 +110,7 @@ function addNewUserToNewUserFile(username, email, password) {
         });
     });
 }
-
+//**** */
 // Endpoint to handle login form submission
 app.post('/login', (req, res) => {
     const { username } = req.body;
@@ -129,10 +129,50 @@ app.post('/login', (req, res) => {
     // Log the generated token to the console
     console.log('Generated token:', token);
 
-    // Redirect to success page
-    res.redirect('/pages/success'); // Adjust the URL as per your folder structure
+    // Write token to token.json
+    writeTokenToJSON(username, token);
+
+    // Redirect to verify page with token data
+    res.redirect(`/verify.html?token=${token}`);
 });
 
+// Endpoint to handle token verification
+app.post('/verify-token', (req, res) => {
+    const { tokenInput, token } = req.body;
+
+    console.log('Token:', token);
+
+    // Check if token and tokenInput are defined
+    if (token && tokenInput) {
+        // Check if tokenInput matches the last 4 characters of the token
+        const lastFourToken = token.slice(-4);
+        if (tokenInput === lastFourToken) {
+            // Token verification successful
+            res.redirect('/pages/success.html'); // Redirect to success page
+            return; // End the function execution
+        }
+    }
+    
+    // Token verification failed
+    res.redirect(`/verify.html?error=1&token=${token}`); // Redirect to verify page with error message
+});
+
+
+
+
+
+
+
+
+//**** */
+
+// Function to write token to token.json
+const writeTokenToJSON = (username, token) => {
+    const tokenData = { username, token };
+    const tokens = JSON.parse(fs.readFileSync('token.json', 'utf8'));
+    tokens.push(tokenData);
+    fs.writeFileSync('token.json', JSON.stringify(tokens, null, 2));
+}
 // Endpoint to handle registration form submission
 app.post('/register', (req, res) => {
     const { newUsername, email, password } = req.body;
