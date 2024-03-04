@@ -185,6 +185,7 @@ app.post('/register', (req, res) => {
 });
 // Endpoint to handle user registration
 app.use((request, response) => {
+    const errorMessage = '404 - route not found.';
     logger.error({ level: 'error', message: errorMessage });
     response.status(404).send(errorMessage);
 });
