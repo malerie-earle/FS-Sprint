@@ -1,20 +1,24 @@
+// Imports
 const express = require("express");
 const path = require('path');
-const bodyParser = require('body-parser'); // Added body-parser
+const bodyParser = require('body-parser'); 
 const { myEmitter, logger } = require('./logEvents');
 const router = require('./routes'); 
-const jwt = require('jsonwebtoken'); // Added jsonwebtoken
-const fs = require('fs'); // Added fs module for file operations
+const jwt = require('jsonwebtoken'); 
+const fs = require('fs'); 
 
+// Create an instance of the express app
 const app = express();
 const PORT = process.env.PORT || 8081;
 
+// Set the view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); 
 
+// Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json()); // Parse JSON bodies
-app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 // Use the router middleware for all routes defined in routes.js
 app.use('/', router);
@@ -34,7 +38,7 @@ function addNewUser(username, email, phone) {
             console.error('Error reading token data:', err);
             return;
         }
-        
+        // Parse the existing data from token.json
         let users = [];
         if (!err) {
             try {
@@ -55,7 +59,7 @@ function addNewUser(username, email, phone) {
             phone: phone,
             token: token,
             expires: expiryDate,
-            confirmed: 'tbd' // Not sure what confirmed status should be
+            confirmed: 'true',
         });
 
         // Write updated data back to token.json file
@@ -82,7 +86,7 @@ function addNewUserToNewUserFile(username, email, password) {
             console.error('Error reading newuser data:', err);
             return;
         }
-        
+        // Parse the existing data from newuser.json
         let users = [];
         if (!err) {
             try {
@@ -110,7 +114,7 @@ function addNewUserToNewUserFile(username, email, password) {
         });
     });
 }
-//**** */
+
 // Endpoint to handle login form submission
 app.post('/login', (req, res) => {
     const { username } = req.body;
@@ -148,23 +152,14 @@ app.post('/verify-token', (req, res) => {
         const lastFourToken = token.slice(-4);
         if (tokenInput === lastFourToken) {
             // Token verification successful
-            res.redirect('/pages/success.html'); // Redirect to success page
-            return; // End the function execution
+            res.redirect('/pages/success.html'); 
+            return;
         }
     }
     
     // Token verification failed
-    res.redirect(`/verify.html?error=1&token=${token}`); // Redirect to verify page with error message
+    res.redirect(`/verify.html?error=1&token=${token}`); 
 });
-
-
-
-
-
-
-
-
-//**** */
 
 // Function to write token to token.json
 const writeTokenToJSON = (username, token) => {
@@ -188,17 +183,17 @@ app.post('/register', (req, res) => {
     // Redirect to new user success page
     res.redirect('/pages/newusersuccess.html'); 
 });
-
+// Endpoint to handle user registration
 app.use((request, response) => {
-    const errorMessage = '404 - route not found.';
     logger.error({ level: 'error', message: errorMessage });
     response.status(404).send(errorMessage);
 });
-
+// Start the server
 const server = app.listen(PORT, () => {
     logger.info({ level: 'info', message: `Server is listening on port ${PORT}` });
 });
 
+// Handle server errors
 server.on('error', (error) => {
     if (error.code === 'EADDRINUSE') {
         logger.error({ level: 'error', message: `Port ${PORT} is already in use.` });
