@@ -7,7 +7,7 @@ const fs = require('fs');
 
 
 // Importing functions from separate DAL files
-const { getProducts } = require('./public/DAL/product.dal.js');
+const { getProducts } = require('./public/DAL - Data Access Layer/product.dal.js');
 
 // Create a new instance of express router
 const router = express.Router();
